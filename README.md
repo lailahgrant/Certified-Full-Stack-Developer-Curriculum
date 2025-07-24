@@ -34,6 +34,29 @@
 
 <h4>Forms and Tables</h4>
 
+- Working with Forms
+
+`Workshop`
+- Build a Hotel Feedback Form
+  - In this workshop, you will build a Hotel Feedback Form. You will practice working with labels, inputs, fieldsets, legends, textareas and buttons.
+
+`Lab`
+- Build a Survey Form
+  - In this lab, you'll review HTML forms by creating a survey form. You'll practice working with the label element, the different input elements, the required attribute, and more.
+
+- Working with Tables
+  - In these lecture videos, you will learn about HTML tables, how to create them, and when to use them. 
+  - What Are HTML Tables Used For, and What Should They Not Be Used For?
+
+`Workshop`
+- Build a Final Exam Table
+
+`Lab`
+- Build a Book Catalog Table
+
+- Working with HTML Tools
+- HTML Tables and Forms Review
+
 <h4>Accessibility</h4>
 
 ## 2. CSS
