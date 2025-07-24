@@ -3,92 +3,107 @@
 
 ## HTML Basics
 - **Role of HTML**: HTML (Hypertext Markup Language) is the foundation of web structure, defining the elements of a webpage.
-- **HTML Elements**: Used to represent content on the page. Most of them are made by an opening and a closing tag (e.g., <h1></h1>, <p></p>).
-HTML Structure: HTML consists of a head and body, where metadata, styles, and content are structured.
-Common HTML Elements: Headings (<h1> - <h6>), paragraphs (<p>), and div containers (<div>).
-div elements: The div element is a generic HTML element that does not hold any semantic meaning. It is used as a generic container to hold other HTML elements.
-Void Elements: Do not have a closing tag (e.g., <img>).
-Attributes: Adding metadata and behavior to elements.
-Identifiers and Grouping
-IDs: Unique element identifiers.
-Classes: Grouping elements for styling and behavior.
-Special Characters and Linking
-HTML entities: Using special characters like &amp; and &lt;.
-link element: Linking to external stylesheets.
-script element: Embedding external JavaScript files.
-Boilerplate and Encoding
-HTML boilerplate: Basic structure of a webpage, which includes the DOCTYPE, html, head, and body elements. It should be used as the starting point for an HTML document.
-UTF-8 character encoding: Ensuring universal character display.
-SEO and Social Sharing
-Meta tags (description): Providing a short description for the web page and impacting SEO.
-Open Graph tags: Enhancing social media sharing.
-Media Elements and Optimization
-Replaced elements: Embedded content (e.g., images, iframes).
-Optimizing media: Techniques to improve media performance.
-Image formats and licenses: Understanding usage rights and types.
-SVGs: Scalable vector graphics for sharp visuals.
-Multimedia Integration
-HTML audio and video elements: Embedding multimedia.
-Embedding with <iframe>: Integrating external video content.
-Paths and Link Behavior
-Target attribute types: Controlling link behavior.
-Absolute vs. relative paths: Navigating directories.
-Path syntax: Understanding /, ./, ../ for file navigation.
-Link states: Managing different link interactions (hover, active).
-Importance of Semantic HTML
-Structural hierarchy for heading elements: It is important to use the correct heading element to maintain the structural hierarchy of the content. The h1 element is the highest level of heading and the h6 element is the lowest level of heading.
-Presentational HTML elements: Elements that define the appearance of content. Ex. the deprecated center, big, and font elements.
-Semantic HTML elements: These elements provide meaning to the structure of the content. Examples include:
-<header>: Represents introductory content.
-<nav>: Contains navigation links.
-<article>: Represents self-contained content.
-<aside>: Used for sidebars or related content.
-<section>: Groups related content within a document.
-<footer>: Defines the footer for a section or document.
-Semantic HTML Elements
-Emphasis (em) element: Marks text that has stress emphasis.
-Idiomatic Text (i) element: Used for highlighting alternative voice or mood, idiomatic terms from another language, technical terms, and thoughts.
-Strong Importance (strong) element: Marks text that has strong importance.
+- **HTML Elements**: Used to represent content on the page. Most of them are made by an opening and a closing tag (e.g., ```html<h1></h1>, <p></p>```).
+- **HTML Structure**: HTML consists of a `head` and `body`, where metadata, styles, and content are structured.
+- **Common HTML Elements**: Headings (```html <h1> - <h6>```), paragraphs (```html <p>```), and `div` containers (```html <div>```).
+- **`div` elements**: The `div` element is a generic HTML element that does not hold any semantic meaning. It is used as a generic container to hold other HTML elements.
+- **Void Elements**: Do not have a closing tag (e.g., ```html <img>```).
+- **Attributes**: Adding metadata and behavior to elements.
+
+## Identifiers and Grouping
+- **IDs**: Unique element identifiers.
+- **Classes**: Grouping elements for styling and behavior.
+
+## Special Characters and Linking
+- **HTML entities**: Using special characters like ```html &amp```; and ```html &lt;```.
+- **`link` element**: Linking to external stylesheets.
+- **`script` element**: Embedding external 
+JavaScript files.
+
+## Boilerplate and Encoding
+- **HTML boilerplate**: Basic structure of a webpage, which includes the `DOCTYPE`, `html`, `head`, and `body` elements. It should be used as the starting point for an HTML document.
+- **UTF-8 character encoding**: Ensuring universal character display.
+
+## SEO and Social Sharing
+- **Meta tags (`description`)**: Providing a short description for the web page and impacting SEO.
+- **Open Graph tags**: Enhancing social media sharing.
+
+## Media Elements and Optimization
+- **Replaced elements**: Embedded content (e.g., images, iframes).
+- **Optimizing media**: Techniques to improve media performance.
+- **Image formats and licenses**: Understanding usage rights and types.
+- **SVGs**: Scalable vector graphics for sharp visuals.
+
+## Multimedia Integration
+- **HTML audio and video elements**: Embedding multimedia.
+- **Embedding with `<iframe>`**: Integrating external video content.
+
+## Paths and Link Behavior
+- **Target attribute types**: Controlling link behavior.
+- **Absolute vs. relative paths**: Navigating directories.
+- **Path syntax**: Understanding `/`, `./`, `../` for file navigation.
+- **Link states**: Managing different link interactions (hover, active).
+
+## Importance of Semantic HTML
+- **Structural hierarchy for heading elements**: It is important to use the correct heading element to maintain the structural hierarchy of the content. The `h1` element is the highest level of heading and the `h6` element is the lowest level of heading.
+- **Presentational HTML elements**: Elements that define the appearance of content. Ex. the deprecated `center`, `big`, and `font` elements.
+- **Semantic HTML elements**: These elements provide meaning to the structure of the content. Examples include:
+  - `<header>`: Represents introductory content.
+  - `<nav>`: Contains navigation links.
+  - `<article>`: Represents self-contained content.
+  - `<aside>`: Used for sidebars or related content.
+  - `<section>`: Groups related content within a document.
+  - `<footer>`: Defines the footer for a section or document.
+
+## Semantic HTML Elements
+- **Emphasis (`em`) element**: Marks text that has stress emphasis.
+- **Idiomatic Text (`i`) element**: Used for highlighting alternative voice or mood, idiomatic terms from another language, technical terms, and thoughts.
+- **Strong Importance (`strong`) element**: Marks text that has strong importance.
 Bring Attention To (b) element: Used to bring attention to text that is not important for the meaning of the content.
-Description List (dl) element: Used to represent a list of term-description groupings.
-Description Term (dt) element: Used to represent the term being defined.
-Description Details (dd) element: Used to represent the description of the term.
-Block Quotation (blockquote) element: Used to represent a section that is quoted from another source.
-Inline Quotation (q) element: Used to represent a short inline quotation.
-Abbreviation (abbr) element: Used to represent an abbreviation or acronym.
-Contact Address (address) element: Used to represent the contact information.
-(Date) Time (time) element: Used to represent a date and/or time.
-Superscript (sup) element: Used to represent superscript text.
-Subscript (sub) element: Used to represent subscript text.
-Inline Code (code) element: Used to represent a fragment of computer code.
-Unarticulated Annotation (u) element: Used to represent a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation.
-Ruby Annotation (ruby) element: Used to represent the text of a ruby annotation.
-Strikethrough (s) element: Used to represent content that is no longer accurate or relevant.
-HTML Form Elements and Attributes
-Forms
-form element: Used to create an HTML form for user input.
-action attribute: Defines where to send form data.
-method attribute: Determines how form data is sent (GET or POST).
-Common Input Types:
-text, email, password, radio, checkbox, number, date.
-action attribute: used to specify the URL where the form data should be sent.
-method attribute: used to specify the HTTP method to use when sending the form data. The most common methods are GET and POST.
+- **Description List (`dl`) element**: Used to represent a list of term-description groupings.
+- **Description Term (`dt`) element**: Used to represent the term being defined.
+- **Description Details (`dd`) element**: Used to represent the description of the term.
+- **Block Quotation (`blockquote`) element**: Used to represent a section that is quoted from another source.
+- **Inline Quotation (`q`) element**: Used to represent a short inline quotation.
+- **Abbreviation (`abbr`) element**: Used to represent an abbreviation or acronym.
+- **Contact Address (`address`) element**: Used to represent the contact information.
+- **(Date) Time (`time`) element**: Used to represent a date and/or time.
+- **Superscript (`sup`) element**: Used to represent superscript text.
+- **Subscript (`sub`) element**: Used to represent subscript text.
+- **Inline Code (`code`) element**: Used to represent a fragment of computer code.
+- **Unarticulated Annotation (`u`) element**: Used to represent a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation.
+- **Ruby Annotation (`ruby`) element**: Used to represent the text of a ruby annotation.
+- **Strikethrough (`s`) element**: Used to represent content that is no longer accurate or relevant.
+
+## HTML Form Elements and Attributes
+### Forms
+- **`form` element**: Used to create an HTML form for user input.
+- **`action` attribute**: Defines where to send form data.
+- **`method` attribute**: Determines how form data is sent (`GET` or `POST`).
+- **Common Input Types**:
+  - `text`, `email`, `password`, `radio`, `checkbox`, `number`, `date`.
+- **`action` attribute**: used to specify the URL where the form data should be sent.
+- **`method` attribute**: used to specify the HTTP method to use when sending the form data. The most common methods are `GET` and `POST`.
+```html 
 <form method="value-goes-here" action="url-goes-here">
   <!-- inputs go inside here -->
 </form>
-input element: used to create an input field for user input.
-type attribute: used to specify the type of input field. Ex. text, email, number, radio, checkbox, etc.
-placeholder attribute: used to show a hint to the user to show them what to enter in the input field.
-value attribute: used to specify the value of the input. If the input has a button type, the value attribute can be used to set the button text.
-name attribute: used to assign a name to an input field, which serves as the key when form data is submitted. For radio buttons, giving them the same name groups them together, so only one option in the group can be selected at a time.
-size attribute: used to define the number of characters that should be visible as the user types into the input.
-min attribute: can be used with input types such as number to specify the minimum value allowed in the input field.
-max attribute: can be used with input types such as number to specify the maximum value allowed in the input field.
-minlength attribute: used to specify the minimum number of characters required in an input field.
-maxlength attribute: used to specify the maximum number of characters allowed in an input field.
-required attribute: used to specify that an input field must be filled out before submitting the form.
-disabled attribute: used to specify that an input field should be disabled.
-readonly attribute: used to specify that an input field is read-only.
+```
+- **`input` element**: used to create an input field for user input.
+- **`type` attribute**: used to specify the type of input field. Ex. `text`, `email`, `number`, `radio`, `checkbox`, etc.
+- **`placeholder` attribute**: used to show a hint to the user to show them what to enter in the input field.
+- **`value` attribute**: used to specify the value of the input. If the input has a `button` type, the `value` attribute can be used to set the button text.
+- **`name` attribute**: used to assign a name to an input field, which serves as the key when form data is submitted. For radio buttons, giving them the same `name` groups them together, so only one option in the group can be selected at a time.
+- **`size` attribute**: used to define the number of characters that should be visible as the user types into the input.
+- **`min` attribute**: can be used with input types such as `number` to specify the minimum value allowed in the input field.
+- **`max` attribute**: can be used with input types such as `number` to specify the maximum value allowed in the input field.
+- **`minlength` attribute**: used to specify the minimum number of characters required in an input field.
+- **`maxlength` attribute**: used to specify the maximum number of characters allowed in an input field.
+- **`required` attribute**: used to specify that an input field must be filled out before submitting the form.
+- **`disabled` attribute**: used to specify that an input field should be disabled.
+- **`readonly` attribute**: used to specify that an input field is read-only.
+
+```html 
 <!-- Text input -->
 <input 
   type="text"
@@ -113,26 +128,35 @@ readonly attribute: used to specify that an input field is read-only.
 
 <!-- Button -->
 <input type="button" value="Show Alert" />
-label element: used to create a label for an input field.
-for attribute: used to specify which input field the label is for.
-Implicit form association: inputs can be associated with labels by wrapping the input field inside the label element.
+```
+
+- **`label` element**: used to create a label for an input field.
+- **`for` attribute**: used to specify which input field the label is for.
+- **Implicit form association**: inputs can be associated with labels by wrapping the input field inside the `label` element.
+```html 
 <form action="">
   <label>
     Full Name:
     <input type="text" />
   </label>
 </form>
-Explicit form association: inputs can be associated with labels by using the for attribute on the label element.
+```
+- **Explicit form association**: inputs can be associated with labels by using the `for` attribute on the `label` element.
+```html 
 <form action="">
   <label for="email">Email Address: </label>
   <input type="email" id="email" />
 </form>
-button element: used to create a clickable button. A button can also have a type attribute, which is used to control the behavior of the button when it is activated. Ex. submit, reset, button.
+```
+- **`button` element**: used to create a clickable button. A button can also have a `type` attribute, which is used to control the behavior of the button when it is activated. Ex. `submit`, `reset`, `button`.
+```html 
 <button type="button">Show Form</button>
 <button type="submit">Submit Form</button>
 <button type="reset">Reset Form</button>
-fieldset element: used to group related inputs together.
-legend element: used to add a caption to describe the group of inputs.
+```
+- **`fieldset` element**: used to group related inputs together.
+- **`legend` element**: used to add a caption to describe the group of inputs.
+```html 
 <!-- Radio group -->
 <fieldset>
   <legend>Was this your first time at our hotel?</legend>
@@ -156,8 +180,10 @@ legend element: used to add a caption to describe the group of inputs.
   <label for="price">Price</label>
   <input type="checkbox" id="price" name="price" value="price" />
 </fieldset>
-Focused state: this is the state of an input field when it is selected by the user.
-Working with HTML Table Elements and Attributes
+```
+- **Focused state**: this is the state of an input field when it is selected by the user.
+
+## Working with HTML Table Elements and Attributes
 Table element: used to create an HTML table.
 Table Head (thead) element: used to group the header content in an HTML table.
 Table Row (tr) element: used to create a row in an HTML table.
