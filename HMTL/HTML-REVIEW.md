@@ -1,5 +1,8 @@
 # HTML Review
 > Review the concepts below to prepare for the upcoming prep exam.
+> Before you take the HTML prep exam, you first need to review the concepts taught in the previous modules.
+
+> Open up this page to review concepts around the basics of HTML elements, semantic HTML, tables, forms and accessibility.
 
 ## HTML Basics
 - **Role of HTML**: HTML (Hypertext Markup Language) is the foundation of web structure, defining the elements of a webpage.
