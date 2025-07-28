@@ -35,7 +35,7 @@
 - [ ] What are good ways to make Audio and Video Content accessible?
 - [ ] What are some ways to make Web Applications Keyboard accessibility? 
 
-## *Lab -* Build a Checkout Page - 
+## *Lab -* Build a Checkout Page  
 > In this lab, you'll create an accessible checkout page.
 
 - [x] You'll practice concepts like `alt` attributes and `ARIA` roles.
@@ -49,7 +49,7 @@
 ## *Lab -* Build a Multimedia Player 
 > In this lab, you'll build a multimedia player.
 
-- [x] You will practice working with the `audio` and `video` elements, the `controls` attribute, and the `aria-label` attribute.
+- [ ] You will practice working with the `audio` and `video` elements, the `controls` attribute, and the `aria-label` attribute.
 
 
 ## HTML Accessibility Review

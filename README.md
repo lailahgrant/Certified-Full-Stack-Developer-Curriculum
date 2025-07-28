@@ -59,6 +59,18 @@
 
 <h4>Accessibility</h4>
 
+- Importance of Accessibility and Good HTML structure
+- Working with Accessible Tables and Forms.
+- Introduction to ARIA
+- Working with Accessible Media Elements
+
+`Lab`
+- Build a Checkout Page
+- Design a Movie Review Page
+- Build a Multimedia Player
+
+- HTML Accessibility Review
+
 ## 2. CSS
 - Computer Basics
 - Basic CSS
