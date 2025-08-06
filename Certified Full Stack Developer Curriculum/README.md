@@ -81,7 +81,7 @@
 - Design a Movie Review Page
 - Build a Multimedia Player
 
-- HTML Accessibility Review
+- [x] HTML Accessibility Review
 
 ## 2. CSS
 

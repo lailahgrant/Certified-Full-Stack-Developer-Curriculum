@@ -362,15 +362,278 @@ And finally, you should let the browser determine the table width whenever possi
 HTML tables are essential for presenting structured data in an accessible and understandable format. By following these accessibility guidelines, you can create tables that are easy to understand for everyone.
 
 
-### b. 
+### b. Why Is It Important for Inputs to Have an Associated Label?
+
+Labels on input fields might seem like small details, but they play a crucial role in making forms easier for everyone to use.
+
+Labels help people with disabilities, make forms more user-friendly for everyone, and ultimately improve form conversion rates.
+
+Let's dive into why adding labels to input elements is important for accessibility and usability.
+
+Screen readers often rely on labels to describe the purpose of input fields. In order for this to work properly, the label must be programmatically associated with the `input`. While there are several ways to do that, the most common is to use the HTML `label` element.
+
+Here's how to associate a `label` with an `input`:
+
+Example Code
+
+```html
+<form>
+   <label for="name">Your Name</label>
+   <input type="text" id="name" />
+</form>
+```
+
+In this example, the `for` attribute of the `label` element is associated with the `id` of the `input` element. This connection allows screen readers to announce the `label` when the `input` is in a focused state, allowing screen reader users to understand the purpose of the `input`.
+
+Associating labels with all input fields also benefits SEO. With proper labels, search engines will understand the page content better, leading to a positive impact on the page search rankings.
+
+But it is important to understand that you're making content for humans, not search engines. So, you should make sure the labels are as clear and descriptive as possible.
 
 
+## 3. Introduction to ARIA
 
+> In these lectures, you will learn about working with ARIA roles
 
+### a. What Is the Purpose of WAI-ARIA, and How Does It Work?
 
+Making static content accessible can be relatively straightforward, but dynamic content can be more challenging. This is where WAI-ARIA comes in.
 
+Let's look at what WAI-ARIA is, its purpose, how it works, and some examples.
 
+WAI-ARIA stands for Web Accessibility Initiative - Accessible Rich Internet Applications. It's a specification that enhances accessibility for dynamic content and UI (User Interface) components.
 
+Note that WCAG and WAI-ARIA are not the same. WCAG provides general guidelines for web accessibility, while WAI-ARIA offers specific rules for making dynamic and interactive content accessible for users of assistive technologies.
+
+So, the primary purpose of WAI-ARIA is to improve accessibility for dynamic content and UI components that do not have native HTML equivalents.
+
+WAI-ARIA works by introducing a set of attributes you can add to HTML elements to provide additional semantic information. These attributes are categorized into roles, states, and properties.
+
+ARIA role defines the purpose of an element within a website or web app. Here is an example of setting the role to `button` for a `div` element.
+
+Example Code
+
+```html
+<div role="button">Click Me</div>
+```
+
+By doing this you are indicating to assistive technology that the element is a button. Roles do not provide any functionality however. Merely giving this `div` a `role` of `button` will not make it act like a button. To make it look and behave like a button you would need to use CSS and JavaScript to get the desired result. It is always better to use the native `button` or `input` element with `type="button"` instead.
+
+Since HTML alone does not provide a way to make custom UI components like tabbed navigation (tab list) accessible, ARIA roles can be very helpful.
+
+Here's what a tablist could look like with the `role` attribute:
+
+Example Code
+
+```html
+<div role="tablist" aria-label="Football Match Dashboard">
+   <button
+     role="tab"
+     aria-selected="true"
+     aria-controls="match-info-panel"
+     id="match-info-tab">
+       Match Info
+   </button>
+
+   <button
+     role="tab"
+     aria-selected="false"
+     aria-controls="player-stats-panel"
+     id="player-stats-tab">
+     Player Stats
+   </button>
+</div>
+```
+
+Each tab in the tablist will have an associated tab panel that will display when its tab is selected. Each tab panel will have a `role` of `tabpanel`.
+
+Here's what each of those tab panels could look like:
+
+Example Code
+
+```html
+<div 
+  role="tabpanel"
+  id="match-info-panel" 
+  aria-labelledby="match-info-tab"
+>
+   <p>
+     Details about the match, including date,
+     time, venue, and current score.
+   </p>
+</div>
+
+<div
+   role="tabpanel"
+   id="player-stats-panel"
+   aria-labelledby="player-stats-tab"
+   hidden
+>
+   <p>
+     Individual player statistics such as goals,
+     assists, and minutes played.
+   </p>
+</div>
+```
+
+ARIA state describes the current status of an element, which can change based on user interactions. An example is the `aria-expanded` attribute for collapsible sections:
+
+Example Code
+
+```html
+<button aria-expanded="false" aria-controls="more-info">
+  More Info
+</button>
+
+<div id="more-info" hidden>
+   <p>This is additional information.</p>
+</div>
+```
+
+> Again, this is merely describing the state, it does not provide any functionality. You would have to use JavaScript to change the state of the attribute when the user clicks the button.
+
+ARIA properties provide additional details about elements. For example, the `aria-labelledby` property lets you connect an element to a specific label:
+
+Example Code
+
+```html
+<h2 id="header-id">About freeCodeCamp</h2>
+<button id="button-id" aria-labelledby="header-id button-id">Learn More</button>
+```
+
+This will make the elements understandable and navigable for users of assistive technologies.
+
+To get the best out of WAI-ARIA, try to stick with native HTML whenever possible since it generally provides more accessibility out of the box.
+
+Use WAI-ARIA only when HTML falls short, and don’t forget to test with assistive technologies like screen readers, or have people with disabilities test your work. Also, make sure your WAI-ARIA states and properties update with the content in real time. Avoid overusing ARIA as it can be confusing many times.
+
+### b. What Are ARIA Roles?
+
+ARIA stands for Accessible Rich Internet Applications.
+
+ARIA roles specify the semantic meaning of HTML elements. They're essential for making web content accessible to people who use assistive technologies, like screen readers.
+
+HTML has semantic and non-semantic elements, based on whether they convey meaning about their content.
+
+Many semantic HTML elements already have an ARIA role assigned by default. For example, the `button` element has a default ARIA role of `button`.
+
+But non-semantic elements don't have a role. For example, screen readers will not know how to interpret the purpose of a `div` if you don't specify its role explicitly.
+
+To specify the ARIA role of an element, you just need to add the `role` attribute, like this `role="ARIA role"`, where value is the name of a role in the ARIA specification.
+
+It is important to note that specifying a role on an element only does one thing: It informs assistive technology of the purpose of the element. It does not add any functionality or behavior to the element. If people expect a role to behave a certain way, it is up to you, the developer, to add that expected behavior. For example, adding a `role` of `button` to a `div` does not automatically make it clickable with a mouse or usable with a keyboard. It is the responsibility of the developer to add the expected behavior that allows the `div` to act like a button, and in most cases, it is just better to use the `button` element.
+
+There are six main categories of ARIA roles:
+
+- Document structure roles
+- Widget roles
+- Landmark roles
+- Live region roles
+- Window roles
+- And Abstract roles
+
+Let's take a look at them in more detail.
+
+**`Document structure`** roles define the overall structure of the web page. With these roles, assistive technologies can understand the relationships between different sections and help users navigate the content.
+
+However, most of the document structure roles are not used in modern web development because browsers already support equivalent semantic HTML elements, which should be prioritized whenever possible.
+
+You should specify the roles that don't have an equivalent semantic element. For example: `toolbar`, `tooltip`, `feed`, `math`, `presentation`, `none`, and `note`.
+
+There are other similar roles but these are the most commonly used ones. This is an example of a `div` with the `math` ARIA role. The `div` contains a mathematical equation.
+
+Example Code
+
+```html
+<div role="math" aria-label="x squared + y squared = 3">
+  x<sup>2</sup> + y<sup>2</sup> = 3
+</div>
+```
+
+You'll also notice that the `div` has an `aria-label` attribute. The value of this attribute should be a string that represents the expression.
+
+**`Widget roles`** define the purpose and functionality of interactive elements, like scrollbars.
+
+Examples of widget roles include `scrollbar`, `searchbox`, `separator` (when focusable), `slider`, `spinbutton`, `switch`, `tab`, `tabpanel`, and `treeitem`.
+
+Some of these roles have equivalent semantic elements. You should prioritize the semantic element over the role if there is one. For example, you should favor using the HTML `button` element over adding a `role` of `button` to a `div`.
+
+**`Landmark roles`** classify and label the primary sections of a web page. Screen readers use them to provide convenient navigation to important sections of a page. You should use them sparingly to keep the overall layout simple and easy to understand. Examples of landmark roles are `banner`, `complementary`, `contentinfo`, `form`, `main`, `navigation`, `region`, and `search`. Each of these roles has a corresponding HTML equivalent, such as `header`, `footer`, `aside`, `form`, `main`, `nav`, `section`, and `search`. If you use the proper HTML elements to define the sections of your page then it is not necessary to explicitly add the `role` attribute to these elements.
+
+**`Live region`** roles define elements with content that will change dynamically. This way, screen readers and other assistive technologies can announce changes to users with visual disabilities. These roles include: `alert`, `log`, `marquee`, `status`, and `timer`.
+
+**`Window roles`** define sub-windows, like pop up modal dialogues. These roles include `alertdialog` and `dialog`. Please note that it is now considered a best practice to use the HTML `dialog` element and its associated JavaScript methods instead of manually creating a dialog.
+
+And finally, we have **`abstract roles`**. These roles help organize the document. They're only meant to be used internally by the browser, not by developers, so you should know that they exist but you shouldn't use them on your websites or web applications.
+
+With ARIA roles, you can create accessible and inclusive websites and web applications. They provide semantic information about the purpose and function of HTML elements.
+
+Screen readers and other assistive technologies use this information to help users understand the content of your page and set expectations for how to use it, which helps ensure that everyone can have a great user experience.
+
+### c. What Are the Roles of the aria-label and aria-labelledby Attributes?
+
+It is important to make sure that all users, including those living with disabilities, can access websites without issues.
+
+For people using screen readers, the `aria-label` and `aria-labelledby` attributes provide crucial information about page elements that might be unclear or invisible.
+
+Let's look at what the `aria-label` and `aria-labelledby` attributes are and the roles they play in making the web accessible to people with visual impairments and related disabilities.
+
+You'll notice both `aria-label` and `aria-labelledby` are prefixed with aria. So what does that mean? ARIA stands for Accessible Rich Internet Applications. It's a set of attributes prefixed with `aria-`, which lets developers communicate the purpose of elements to assistive technologies. The `aria-label` attribute is an invisible label for interactive elements. It adds a text label to an element that screen readers can read.
+
+`aria-label` is especially useful for elements that do not have visible text but still need to be described by screen readers. For example, buttons with only icons often need `aria-label` to convey their purpose.
+
+Here is an example:
+
+Example Code
+
+```html
+<button aria-label="Search">
+  <i class="fas fa-search"></i>
+</button>
+```
+
+In this case, a screen reader may announce this button as `Search, button`, even though the button only contains an icon. The `aria-label` attribute tells screen readers what text to use in place of the icon.
+
+If the button contained the text "Search" instead of an icon, then there would be no need for the `aria-label` attribute as the text would provide the label for the button.
+
+For input elements, the `aria-label` attribute provides a label directly if there isn't a visible label associated with the input.
+
+The `aria-labelledby` attribute does the exact same thing as the `aria-label` attribute, but instead of defining the text directly in the attribute, you use a reference to text that already exists on the page. The existing text must have an `id` attribute, which will be used for the reference value in the `aria-labelledby` attribute.
+
+Here's an example:
+
+Example Code
+
+```html
+<input type="text" aria-labelledby="search-btn">
+<button type="button" id="search-btn">Search</button>
+```
+
+In this case, the text for the button is being used as the label for the search input. Screen readers will announce the input as something like `Search, edit`. If you later decide you want to change the button text to `Find`, the label for the input will automatically be updated to the new text since it is referencing the button text. Combining multiple `id` values into a single `aria-labelledby` attribute value is also possible. Here's how that works:
+
+Example Code
+
+```html
+<div>
+  <span id="volume-label">Volume</span>
+  <span id="volume-details">Adjust the volume level</span>
+  <input
+    type="range"
+    min="0"
+    max="100"
+    value="30"
+    aria-labelledby="volume-label volume-details">
+</div>
+```
+
+For the slider, the screen reader will look out for the content of the `volume-label` and `volume-details` elements and announce `Volume Adjust the volume level`.
+
+You've seen that both `aria-label` and `aria-labelledby` attributes help screen readers understand what elements do. So, which one should you use? Since they both provide the same functionality, either can be used, but there may be a few advantages to using `aria-labelledby` over `aria-label`:
+
+- If someone is using a translation service to translate the content on your page, the text in an `aria-label` attribute may not always be translated.
+- Using `aria-labelledby` can also help prevent a mismatch between the visible label text and the invisible label for screen reader users since updating the visible text will automatically update the invisible label.
+- `aria-labelledby` can make it much easier to programmatically create complex invisible labels consisting of multiple sources of text.
+
+One last note, do not use `aria-label` and `aria-labelledby` on an element at the same time. In this case, the invisible label for screen readers will always be determined by `aria-labelledby` and `aria-label` will be completely ignored.
 
 
 
